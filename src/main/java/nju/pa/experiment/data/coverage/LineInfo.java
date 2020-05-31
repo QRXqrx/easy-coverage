@@ -1,4 +1,4 @@
-package nju.pa.experiment.data;
+package nju.pa.experiment.data.coverage;
 
 import com.alibaba.fastjson.annotation.JSONField;
 import lombok.AllArgsConstructor;

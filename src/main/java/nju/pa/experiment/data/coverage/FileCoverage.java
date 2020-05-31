@@ -1,4 +1,4 @@
-package nju.pa.experiment.data;
+package nju.pa.experiment.data.coverage;
 
 import com.alibaba.fastjson.annotation.JSONField;
 import lombok.AllArgsConstructor;
@@ -9,9 +9,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Record parsing result for <package> tags
- *
- * <package name="net.mooctest">
+ * Record parsing result for <file> tags
  *
  * @author QRX
  * @email QRXwzx@outlook.com
@@ -20,38 +18,42 @@ import java.util.Map;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class PackageCoverage implements Coverage{
+public class FileCoverage implements Coverage{
 
     /**
-     * According to "name" attribute of <package> tag
+     * Java file name.
      */
     @JSONField
-    private String packageName;
+    private String fileName;
+
+    /**
+     * File path
+     */
+    @JSONField(ordinal = 1)
+    private String filePath;
 
     /**
      * "BCR" for "Branch Coverage Rate & Ratio"
      */
-    @JSONField(ordinal = 1)
+    @JSONField(ordinal = 2)
     private Map<String, String> BCR;
 
     /**
      * "LCR" for "Line Coverage Rate & Ratio""
      */
-    @JSONField(ordinal = 2)
+    @JSONField(ordinal = 3)
     private Map<String, String> LCR;
 
     /**
      * "MCR" for "Method Coverage Rate & Ratio""
      */
-    @JSONField(ordinal = 3)
+    @JSONField(ordinal = 4)
     private Map<String, String> MCR;
 
-
     /**
-     * One package comprises several java files.
+     * One <file> contains several <line>
      */
-    @JSONField(ordinal = 4)
-    private List<FileCoverage> fileCoverages;
-
+    @JSONField(ordinal = 5)
+    private List<LineInfo> lineInfos;
 
 }

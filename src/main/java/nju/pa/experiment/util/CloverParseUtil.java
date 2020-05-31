@@ -1,6 +1,6 @@
 package nju.pa.experiment.util;
 
-import nju.pa.experiment.data.*;
+import nju.pa.experiment.data.coverage.*;
 import org.dom4j.Document;
 import org.dom4j.DocumentException;
 import org.dom4j.Element;

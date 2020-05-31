@@ -1,7 +1,5 @@
 package nju.pa.experiment;
 
-import nju.pa.experiment.data.PackageCoverage;
-import nju.pa.experiment.data.ProjectCoverage;
 import nju.pa.experiment.util.CloverParseUtil;
 import org.dom4j.Document;
 import org.dom4j.DocumentException;
@@ -17,7 +15,7 @@ import java.util.List;
  * @email QRXwzx@outlook.com
  * @date 2020-05-30
  */
-public class ParseXml {
+public class ParseXmlTest {
 
     private String cloverPath = "material/clover-example/RBT/clover.xml";
     private File cloverFile = new File(cloverPath);

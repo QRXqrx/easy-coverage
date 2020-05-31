@@ -1,0 +1,42 @@
+						{
+							"lineNumber":53,
+							"isCovered":true,
+							"type":"method",
+							"count":3003
+						},
+                        ***********************
+						{
+							"lineNumber":53,
+							"isCovered":true,
+							"type":"method",
+							"count":3
+						},
+-------------------------------------------------------------------------
+						{
+							"lineNumber":38,
+							"isCovered":true,
+							"type":"branch-true",
+							"count":65852
+						},
+                        ***********************
+						{
+							"lineNumber":38,
+							"isCovered":false,
+							"type":"branch-true",
+							"count":0
+						},
+-------------------------------------------------------------------------
+						{
+							"lineNumber":36,
+							"isCovered":true,
+							"type":"stmt",
+							"count":4011
+						},
+                        ***********************
+						{
+							"lineNumber":36,
+							"isCovered":false,
+							"type":"stmt",
+							"count":0
+						},
+-------------------------------------------------------------------------
