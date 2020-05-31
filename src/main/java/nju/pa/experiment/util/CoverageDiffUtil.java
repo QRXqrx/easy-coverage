@@ -8,11 +8,9 @@ import nju.pa.experiment.data.diff.LineLocation;
 import nju.pa.experiment.data.diff.LocationDiff;
 import nju.pa.experiment.util.exception.CannotDiffException;
 
-import java.lang.reflect.Method;
+
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 /**
  * This Util provide methods of compare the difference between
@@ -82,13 +80,12 @@ public class CoverageDiffUtil {
         String index = location1.getIndex();
         String diffCovered = String.valueOf(location1.getIsCovered());
         String diffCount = String.valueOf(location1.getCount());
-        boolean isChanged = false;
+        boolean isChanged = computeIsChanged(location1, location2);
 
         if(!location1.getIsCovered().equals(location2.getIsCovered()))
             diffCovered = formulateDiff(location1.getIsCovered(), location2.getIsCovered());
         if(!location1.getCount().equals(location2.getCount()))
             diffCount = formulateDiff(location1.getCount(), location2.getCount());
-        isChanged = computeIsChanged(location1, location2);
 
         return new LocationDiff(index, diffCovered, diffCount, isChanged);
     }
